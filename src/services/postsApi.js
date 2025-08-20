@@ -11,7 +11,8 @@ export const postApi = createApi({
         }),
         getPostById: builder.query({
             query:(id)=>`posts/${id}`,
-        })
+        }),
+        inValidatesTags:["Posts"],
     })
 })
 export const {useGetPostQuery, useGetPostByIdQuery } = postApi;
