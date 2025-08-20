@@ -39,7 +39,7 @@ const PostList = () => {
             Individual Card
           </button>
         </div>
-        <div className="grid grid-cols-5 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2">
           {isShowCart &&
             data.map((item) => (
               <div
@@ -49,14 +49,6 @@ const PostList = () => {
                 <div
                   className={`min-h-14 bg-blue-800 text-white flex justify-center items-center`}
                 >
-                  {/* <div className="flex justify-between">
-                    <span>
-                      <b>ID:</b> {item.id}
-                    </span>
-                    <span>
-                      <b>User ID:</b> {item.userId}
-                    </span>
-                  </div> */}
                   <h2 className={`font-bold text-center capitalize`}>
                     {item.title}
                   </h2>
@@ -66,18 +58,15 @@ const PostList = () => {
             ))}
         </div>
         {isShowIndividualCart && (
-          <ul className={`grid grid-cols-5 gap-2`}>
+          // <ul className={`grid grid-cols-5 gap-2`}>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2">
             {data.map((item, index) => (
-              <li
-                key={item.id}
-                onClick={(e) => handleShowingDetails(item.id)}
-                // className={`border border-gray-400 rounded-2xl p-2`}
-              >
+              <li key={item.id} onClick={(e) => handleShowingDetails(item.id)}>
                 <div
-                  className={`min-h-16  border-gray-400 rounded-lg overflow-hidden`}
+                  className={`min-h-16 border-gray-400 rounded-lg overflow-hidden`}
                 >
                   <div
-                    className={`min-h-14 bg-blue-800 text-white flex justify-center items-center cursor-pointer transition-all duration-200 hover:bg-blue-900 hover:text-white`}
+                    className={`h-14 p-1 bg-blue-800 text-white flex justify-center cursor-pointer transition-all duration-200 hover:bg-blue-900 hover:text-white overflow-hidden`}
                   >
                     <h2 className={`font-bold text-center capitalize`}>
                       {item.title}
