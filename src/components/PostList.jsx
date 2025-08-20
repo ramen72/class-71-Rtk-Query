@@ -2,11 +2,15 @@ import { useGetPostQuery } from '../services/postsApi';
 
 const PostList = () => {
      const { data, error, isLoading } = useGetPostQuery();
-    console.log(data);
-    
+     if(isLoading) return <p>loading</p>
+     console.log(data);
     return (
         <>
-            <h1>PostList</h1>
+            {
+                data.map((item)=>(
+                    <p>{item.title}</p>
+                ))
+            }
         </>
     );
 };
