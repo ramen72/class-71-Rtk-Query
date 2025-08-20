@@ -57,9 +57,11 @@ const PostList = () => {
                       <b>User ID:</b> {item.userId}
                     </span>
                   </div> */}
-                  <h2 className={`font-bold text-center`}>{item.title}</h2>
+                  <h2 className={`font-bold text-center capitalize`}>
+                    {item.title}
+                  </h2>
                 </div>
-                <p className={`p-2 text-justify`}>{item.body}</p>
+                <p className={`p-2 text-justify capitalize`}>{item.body}</p>
               </div>
             ))}
         </div>
@@ -77,10 +79,12 @@ const PostList = () => {
                   <div
                     className={`min-h-14 bg-blue-800 text-white flex justify-center items-center cursor-pointer transition-all duration-200 hover:bg-blue-900 hover:text-white`}
                   >
-                    <h2 className={`font-bold text-center`}>{item.title}</h2>
+                    <h2 className={`font-bold text-center capitalize`}>
+                      {item.title}
+                    </h2>
                   </div>
                   {selectedId === item.id && (
-                    <p className={`p-2 text-justify bg-blue-200`}>
+                    <p className={`p-2 text-justify bg-blue-200 capitalize`}>
                       {item.body}
                     </p>
                   )}
