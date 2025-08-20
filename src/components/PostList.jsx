@@ -25,7 +25,7 @@ const PostList = () => {
   return (
     <>
       <div className={`px-10`}>
-        <div className={`flex gap-2`}>
+        <div className={`flex flex-wrap justify-center items-center gap-2`}>
           <button
             onClick={handleClickForLoadingCard}
             className={`font-bold text-gray-600 capitalize border border-gray-400 py-3 px-5 rounded-lg my-3 transition-all duration-300 hover:bg-gray-400 hover:text-white cursor-pointer`}
